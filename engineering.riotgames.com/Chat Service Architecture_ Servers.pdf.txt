@@ -1,0 +1,1 @@
+http://engineering.riotgames.com/news/chat-service-architecture-servers
