@@ -1,0 +1,1 @@
+http://sforsuresh.in/implemention-of-user-permission-with-php-mysql-bitwise-operators/
