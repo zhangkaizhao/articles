@@ -1,0 +1,10 @@
+https://dzone.com/articles/microservices-in-practice-1
+
+Microservices in Practice: From Architecture to Deployment
+
+In this post, I'm planning to cover the key architectural concepts of the Microservices Architecture (MSA) and how you can use those architectural principles in practice.
+
+by Kasun Indrasiri  ·  Feb. 09, 16 · Cloud Zone
+
+
+Topics: INTEGRATION ARCHITECTURE, MICROSERVICES, MICROSERVICE ARCHITECTURE, SERVICE ORIENTED ARCHITECTURE

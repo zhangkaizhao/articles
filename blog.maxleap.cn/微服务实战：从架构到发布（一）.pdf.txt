@@ -1,0 +1,7 @@
+https://blog.maxleap.cn/archives/195
+
+微服务实战：从架构到发布（一）
+
+原文作者：Kasun Indrasiri，软件架构师，WSO2
+原文链接：https://dzone.com/articles/microservices-in-practice-1
+翻译自MaxLeap团队_云服务研发成员：Frank Qin
