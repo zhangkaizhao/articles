@@ -1,0 +1,7 @@
+https://blog.maxleap.cn/archives/524
+
+微服务系统中的服务发现机制
+
+原文作者：Chris Richardson，他是早期基于Java的Amazonite EC2 PaaS平台CloudFoundry.com的创始人。现在他为企业提供如何开发和部署应用的咨询服务
+原文链接：https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/
+翻译自MaxLeap团队_云服务研发成员：Lam Yu

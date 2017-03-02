@@ -1,0 +1,23 @@
+https://www.nginx.com/blog/service-discovery-in-a-microservices-architecture/
+
+Service Discovery in a Microservices Architecture
+
+Chris Richardson  ·  October 12, 2015
+
+tags: microservices, service discovery, etcd, DevOps, Netflix, Amazon Web Services (AWS), ZooKeeper, Consul
+
+Editor – This seven‑part series of articles is now complete:
+
+1. Introduction to Microservices
+2. Building Microservices: Using an API Gateway
+3. Building Microservices: Inter-Process Communication in a Microservices Architecture
+4. Service Discovery in a Microservices Architecture (this article)
+5. Event-Driven Data Management for Microservices
+6. Choosing a Microservices Deployment Strategy
+7. Refactoring a Monolith into Microservices
+
+You can also download the complete set of articles, plus information about implementing microservices using NGINX Plus, as an ebook – Microservices: From Design to Deployment.
+
+This is the fourth article in our series about building applications with microservices. The first article introduces the Microservices Architecture pattern and discussed the benefits and drawbacks of using microservices. The second and third articles in the series describe different aspects of communication within a microservices architecture. In this article, we explore the closely related problem of service discovery.
+
+Guest blogger Chris Richardson is the founder of the original CloudFoundry.com, an early Java PaaS (Platform as a Service) for Amazon EC2. He now consults with organizations to improve how they develop and deploy applications. He also blogs regularly about microservices at http://microservices.io .
