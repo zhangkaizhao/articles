@@ -1,0 +1,1 @@
+https://www.dozer.cc/2016/07/mysql-connection-pool-in-python.html
