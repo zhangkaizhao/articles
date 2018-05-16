@@ -1,0 +1,5 @@
+https://www.peterbe.com/plog/rust-go-python-parse-millions-of-dates-in-csv
+
+Rust > Go > Python ...to parse millions of dates in CSV files
+
+15 May 2018
