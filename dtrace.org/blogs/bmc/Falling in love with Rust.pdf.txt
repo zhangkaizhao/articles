@@ -1,0 +1,1 @@
+http://dtrace.org/blogs/bmc/2018/09/18/falling-in-love-with-rust/
