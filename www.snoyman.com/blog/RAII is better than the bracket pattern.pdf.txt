@@ -1,0 +1,1 @@
+https://www.snoyman.com/blog/2018/10/raii-better-than-bracket-pattern
