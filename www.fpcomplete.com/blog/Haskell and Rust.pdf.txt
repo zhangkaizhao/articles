@@ -1,0 +1,1 @@
+https://www.fpcomplete.com/blog/2018/11/haskell-and-rust
