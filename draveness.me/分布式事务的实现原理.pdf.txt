@@ -1,0 +1,1 @@
+https://draveness.me/distributed-transaction-principle
