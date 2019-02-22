@@ -1,0 +1,3 @@
+https://blog.discourse.org/2018/04/effectively-using-discourse-together-with-group-chat/
+
+via https://discuss.python.org/t/what-about-zulip/197/6
