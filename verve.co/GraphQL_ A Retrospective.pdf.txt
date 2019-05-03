@@ -1,0 +1,99 @@
+https://verve.co/engineering/graphql-a-retrospective/
+
+--
+
+1. https://news.ycombinator.com/item?id=18563078
+meritt https://news.ycombinator.com/user?id=meritt
+
+While this post is supposed to be about GraphQL, it seems to focus more about
+the benefits of having a centralized request broker / gateway for your APIs and
+nothing unique to GraphQL.
+
+Their rule of "AVOID NESTING OBJECTS, JUST RETURN IDS OF RELATED OBJECTS"
+definitely is missing out one of the core benefits of GraphQL: being able to
+fetch related resources in a single request. Feels to me like they decided to
+switch to GraphQL cause it's supposedly better but are still utilizing it
+exactly like you would a REST API.
+
+1.1 https://news.ycombinator.com/item?id=18563234
+joekur https://news.ycombinator.com/user?id=joekur
+
+My understanding is that they are keeping their REST endpoints flat, however
+their gateway graphql layer can still respond with nested resources - it would
+require aggregating multiple REST requests together.
+
+1.1.1 https://news.ycombinator.com/item?id=18564774
+andrewingram https://news.ycombinator.com/user?id=andrewingram
+
+Right, this is the approach I've always advocated. I don't mention it
+specifically in this post I wrote a while ago about optimising GraphQL, but my
+implicit assumption was that you're building your GraphQL server on top of an
+underlying platform:
+
+https://blog.apollographql.com/optimizing-your-graphql-request-waterfalls-7c3f3360b051
+
+In real-world UIs, I've found that queries rarely end up being more than a few
+levels deep and are relatively easily optimised as long as your internal APIs
+can handle batches (easy for entities, harder for pagination). Additionally,
+even though the only-return-IDs-for-relations pattern means you can't utilise
+joins effectively, the upside is that you end up with much simpler database
+queries that area easier to optimise at scale. My rule of thumb was that as
+long as the query representing an entire screen could typically return in sub
+100ms in production, it was acceptable (this was without any caching at the
+GraphQL level, which I had planned but left the company before I could
+implement it).
+
+--
+
+1. https://www.reddit.com/r/graphql/comments/a1kr5b/graphql_a_retrospective/earwvts/
+smeijer87 https://www.reddit.com/user/smeijer87
+
+Nice article, but I am a little confused about this sentence
+
+> AVOID NESTING OBJECTS, JUST RETURN IDS OF RELATED OBJECTS
+
+Is the author still talking about graphql there? So basically no nested
+resolver?
+
+```
+query {
+  post(id: "foo") {
+    author {
+      name
+    }
+    comments(first: 5) {
+      author {
+        name
+      }
+      body
+    }
+  }
+}
+```
+Giving up structures like that, doesn't feel correct to me.
+
+1.1 https://www.reddit.com/r/graphql/comments/a1kr5b/graphql_a_retrospective/eas603k/
+andrewingram https://www.reddit.com/user/andrewingram
+
+They mean that the resolver for `post` doesn't also do the fetching for
+`author` and `comment`.
+
+So a downstream API call for `get_post_by_id` may return raw data like this:
+
+```
+{
+  title: 'blah',
+  author_id: 5,
+}
+```
+
+Then the resolver for the author field on a post makes another call for
+`get_author_by_id` in parallel with the call for comments which would be
+something like `get_comment_ids_for_post`, and a follow-up call
+`get_comment_by_id_batch` (which fetches all the comments in one go). You don't
+get to take advantage of joins, but you get simpler database queries and easier
+caching. You can see more elaborate examples in this old post of mine:
+
+https://blog.apollographql.com/optimizing-your-graphql-request-waterfalls-7c3f3360b051
+
+--
