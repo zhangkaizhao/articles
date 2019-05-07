@@ -1,0 +1,5 @@
+https://dave.cheney.net/2014/10/17/functional-options-for-friendly-apis
+
+via https://engineering.wework.com/choosing-a-language-stack-cac3726928f6
+
+Discussion on Reddit: https://www.reddit.com/r/golang/comments/2jf63r/dotgo_functional_options_for_friendly_apis/ .
