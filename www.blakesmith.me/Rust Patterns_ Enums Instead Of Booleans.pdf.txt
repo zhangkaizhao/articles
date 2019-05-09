@@ -1,0 +1,1 @@
+http://www.blakesmith.me/2019/05/07/rust-patterns-enums-instead-of-booleans.html
