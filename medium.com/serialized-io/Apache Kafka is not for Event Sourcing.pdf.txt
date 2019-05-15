@@ -1,0 +1,3 @@
+https://medium.com/serialized-io/apache-kafka-is-not-for-event-sourcing-81735c3cf5c
+
+via https://github.com/meilisearch/MeiliES
