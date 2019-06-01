@@ -1,0 +1,1 @@
+https://developer.okta.com/blog/2019/01/23/nobody-cares-about-oauth-or-openid-connect
