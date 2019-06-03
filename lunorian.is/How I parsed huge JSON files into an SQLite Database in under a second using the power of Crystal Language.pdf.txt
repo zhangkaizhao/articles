@@ -1,0 +1,1 @@
+https://lunorian.is/2019/06/01/how-i-parsed-huge-json-files-into-an-sqlite-database-in-under-a-second-using-the-power-of-crystal-language/
