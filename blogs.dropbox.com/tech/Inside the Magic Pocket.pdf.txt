@@ -1,0 +1,3 @@
+https://blogs.dropbox.com/tech/2016/05/inside-the-magic-pocket/
+
+via https://github.com/binhnguyennus/awesome-scalability/commit/5109bd4be46aac63f00f3ebdc69369954feef0a1
