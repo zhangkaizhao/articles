@@ -1,0 +1,1 @@
+http://highscalability.com/blog/2013/6/10/the-10-deadly-sins-against-scalability.html
