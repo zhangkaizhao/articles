@@ -1,0 +1,3 @@
+https://rushter.com/blog/python-gil-thread-scheduling/
+
+via https://github.com/zpoint/CPython-Internals
