@@ -1,0 +1,3 @@
+https://matematikaadit.github.io/posts/rust-turbofish.html
+
+via https://github.com/jplatte/turbo.fish
