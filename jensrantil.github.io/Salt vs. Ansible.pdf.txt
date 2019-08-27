@@ -1,0 +1,3 @@
+https://jensrantil.github.io/post/salt-vs-ansible/
+
+via https://www.cnblogs.com/huang0925/p/4664608.html (Chinese translation)
