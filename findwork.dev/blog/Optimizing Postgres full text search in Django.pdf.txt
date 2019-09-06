@@ -1,0 +1,3 @@
+https://findwork.dev/blog/optimizing-postgres-full-text-search-django/
+
+via http://weekly.pychina.org/issue/issue-384.html (in Chinese, translation of https://pycoders.com/issues/384 )
