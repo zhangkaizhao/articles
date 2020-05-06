@@ -1,0 +1,1 @@
+https://blog.logrocket.com/versioning-fields-graphql/
