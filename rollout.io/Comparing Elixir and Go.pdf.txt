@@ -1,0 +1,3 @@
+https://rollout.io/blog/comparing-elixir-go/
+
+via https://www.zhihu.com/question/341832872/answer/811226167 (in Chinese)
