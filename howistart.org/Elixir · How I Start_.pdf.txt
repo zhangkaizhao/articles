@@ -1,0 +1,5 @@
+https://howistart.org/posts/elixir/1/
+
+via http://blog.plataformatec.com.br/2015/06/elixir-in-times-of-microservices/
+
+via http://www.thinkingincrowd.me/2018/09/19/programming-language-born-for-distributed-environment/ (in Chinese)
