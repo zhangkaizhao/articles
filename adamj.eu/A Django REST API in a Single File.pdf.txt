@@ -1,0 +1,1 @@
+https://adamj.eu/tech/2020/10/15/a-single-file-rest-api-in-django/
