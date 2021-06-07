@@ -1,0 +1,1 @@
+https://awesomekling.github.io/Serenity-C++-patterns-References-instead-of-Pointers/
