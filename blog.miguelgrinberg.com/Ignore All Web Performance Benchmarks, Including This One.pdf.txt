@@ -1,0 +1,1 @@
+https://blog.miguelgrinberg.com/post/ignore-all-web-performance-benchmarks-including-this-one
