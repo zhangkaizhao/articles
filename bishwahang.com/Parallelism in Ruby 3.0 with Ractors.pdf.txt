@@ -1,0 +1,1 @@
+https://bishwahang.com/2021/02/05/parallelism-in-ruby-3-0-with-ractors.html
