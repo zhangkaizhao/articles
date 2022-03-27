@@ -1,0 +1,3 @@
+https://washbear.neocities.org/freebsd-netbsd-user.html
+
+via https://www.unitedbsd.com/d/527-freebsd-from-a-netbsd-users-perspective
