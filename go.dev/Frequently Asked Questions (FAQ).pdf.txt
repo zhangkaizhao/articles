@@ -1,0 +1,3 @@
+https://go.dev/doc/faq
+
+via Chinese translation https://go-zh.org/doc/faq
