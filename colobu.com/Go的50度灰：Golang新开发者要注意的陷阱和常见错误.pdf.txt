@@ -1,0 +1,163 @@
+https://colobu.com/2015/09/07/gotchas-and-common-mistakes-in-go-golang/
+
+The latest part "Cgo (aka Brave Beginner)" updated to the original article has not translated in this translation yet.
+
+Cgo (aka Brave Beginner):
+
+* Import C and Multiline Import Blocks
+* No blank lines Between Import C and Cgo Comments
+* Can't Call C Functions with Variable Arguments
+
+----
+
+## Cgo (aka Brave Beginner)
+
+
+### Import C and Multiline Import Blocks
+
+level: Cgo
+
+You need to import the "C" package to use Cgo. You can do that with a single line `import` or you can do it with an `import` block.
+
+```go
+package main
+
+/*
+#include <stdlib.h>
+*/
+import (
+  "C"
+)
+
+import (
+  "unsafe"
+)
+
+func main() {
+  cs := C.CString("my go string")
+  C.free(unsafe.Pointer(cs))
+}
+```
+
+If you are using the `import` block format you can't import other packages in the same block.
+
+```go
+package main
+
+/*
+#include <stdlib.h>
+*/
+import (
+  "C"
+  "unsafe"
+)
+
+func main() {
+  cs := C.CString("my go string")
+  C.free(unsafe.Pointer(cs))
+}
+```
+
+Compile Error:
+
+    ./main.go:13:2: could not determine kind of name for C.free
+
+### No blank lines Between Import C and Cgo Comments
+
+level: Cgo
+
+One of the first gotchas with Cgo is the location of the cgo comments above the `import "C"` statement.
+
+```go
+package main
+
+/*
+#include <stdlib.h>
+*/
+
+import "C"
+
+import (
+  "unsafe"
+)
+
+func main() {
+  cs := C.CString("my go string")
+  C.free(unsafe.Pointer(cs))
+}
+```
+
+Compile Error:
+
+    ./main.go:15:2: could not determine kind of name for C.free
+
+Make sure you don't have any blank lines above `import "C"` statement.
+
+
+### Can't Call C Functions with Variable Arguments
+
+level: Cgo
+
+You can't call C functions with variable arguments directly.
+
+```go
+package main
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+*/
+import "C"
+
+import (
+  "unsafe"
+)
+
+func main() {
+  cstr := C.CString("go")
+  C.printf("%s\n",cstr) //not ok
+  C.free(unsafe.Pointer(cstr))
+}
+```
+
+Compile Error:
+
+    ./main.go:15:2: unexpected type: ...
+
+You have to wrap your variadic C functions in functions with a known number of parameters.
+
+```go
+package main
+
+/*
+#include <stdio.h>
+#include <stdlib.h>
+
+void out(char* in) {
+  printf("%s\n", in);
+}
+*/
+import "C"
+
+import (
+  "unsafe"
+)
+
+func main() {
+  cstr := C.CString("go")
+  C.out(cstr) //ok
+  C.free(unsafe.Pointer(cstr))
+}
+```
+
+
+## Comments and Discussions
+
+Old [Reddit] discussion.
+
+Latest [Hacker News] discussion.
+
+Thank you for your feedback and suggestions!
+
+[Reddit]: https://www.reddit.com/r/golang/comments/360vlb/draft_traps_gotchas_and_common_mistakes_in_go/
+[Hacker News]: https://news.ycombinator.com/item?id=17350776
