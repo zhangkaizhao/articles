@@ -1,0 +1,3 @@
+https://kerkour.com/what-a-better-rust-would-look-like
+
+via https://this-week-in-rust.org/blog/2022/04/27/this-week-in-rust-440/
