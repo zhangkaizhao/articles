@@ -1,0 +1,5 @@
+https://blog.openreplay.com/ajax-battle-xmlhttprequest-vs-the-fetch-api
+
+via https://www.infoq.cn/article/NBD3CBCDqezhJxwVa26a (Chinese translation)
+
+via https://www.techug.com/post/ajax-battle-xmlhttprequest-and-fetch-api.html (in Chinese)
