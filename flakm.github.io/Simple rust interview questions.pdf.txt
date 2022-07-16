@@ -1,0 +1,3 @@
+https://flakm.github.io/posts/rust_interview_questions/
+
+via https://this-week-in-rust.org/blog/2022/06/01/this-week-in-rust-445/
