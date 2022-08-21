@@ -1,0 +1,3 @@
+https://itsallaboutthebit.com/async-simple/
+
+via https://this-week-in-rust.org/blog/2022/06/08/this-week-in-rust-446/
