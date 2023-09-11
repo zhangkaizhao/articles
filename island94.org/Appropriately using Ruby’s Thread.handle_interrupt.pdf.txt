@@ -1,0 +1,79 @@
+https://island94.org/2023/08/appropriately-using-rubys-thread-handle_interrupt
+
+via https://rubyweekly.com/issues/668
+
+----
+
+Reference:
+
+https://ruby-doc.org/3.2.2/Thread.html#method-c-handle_interrupt
+
+### Usage
+
+In this example, we can guard from `Thread#raise` exceptions.
+
+Using the `:never` TimingSymbol the `RuntimeError` exception will always be ignored in the first block of the main thread. In the second `::handle_interrupt` block we can purposefully handle `RuntimeError` exceptions.
+
+```ruby
+th = Thread.new do
+  Thread.handle_interrupt(RuntimeError => :never) {
+    begin
+      # You can write resource allocation code safely.
+      Thread.handle_interrupt(RuntimeError => :immediate) {
+        # ...
+      }
+    ensure
+      # You can write resource deallocation code safely.
+    end
+  }
+end
+Thread.pass
+# ...
+th.raise "stop"
+```
+
+While we are ignoring the `RuntimeError` exception, it’s safe to write our resource allocation code. Then, the ensure block is where we can safely deallocate your resources.
+
+#### Guarding from Timeout::Error
+
+In the next example, we will guard from the Timeout::Error exception. This will help prevent from leaking resources when Timeout::Error exceptions occur during normal ensure clause. For this example we use the help of the standard library Timeout, from lib/timeout.rb
+
+```ruby
+require 'timeout'
+Thread.handle_interrupt(Timeout::Error => :never) {
+  timeout(10){
+    # Timeout::Error doesn't occur here
+    Thread.handle_interrupt(Timeout::Error => :on_blocking) {
+      # possible to be killed by Timeout::Error
+      # while blocking operation
+    }
+    # Timeout::Error doesn't occur here
+  }
+}
+```
+
+In the first part of the `timeout` block, we can rely on Timeout::Error being ignored. Then in the `Timeout::Error => :on_blocking` block, any operation that will block the calling thread is susceptible to a Timeout::Error exception being raised.
+
+#### Stack control settings
+
+It’s possible to stack multiple levels of `::handle_interrupt` blocks in order to control more than one ExceptionClass and TimingSymbol at a time.
+
+```ruby
+Thread.handle_interrupt(FooError => :never) {
+  Thread.handle_interrupt(BarError => :never) {
+     # FooError and BarError are prohibited.
+  }
+}
+```
+
+#### Inheritance with ExceptionClass
+
+All exceptions inherited from the ExceptionClass parameter will be considered.
+
+```ruby
+Thread.handle_interrupt(Exception => :never) {
+  # all exceptions inherited from Exception are prohibited.
+}
+```
+
+For handling all interrupts, use `Object` and not `Exception` as the ExceptionClass, as kill/terminate interrupts are not handled by `Exception`.
