@@ -1,0 +1,1 @@
+https://avestura.dev/blog/problems-of-c-and-how-zig-addresses-them
