@@ -1,0 +1,1 @@
+https://go.dev/blog/errors-are-values
