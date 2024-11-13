@@ -1,0 +1,8 @@
+https://go.dev/doc/effective_go
+
+Chinese translations:
+
+* https://go-zh.org/doc/effective_go.html
+* https://learnku.com/docs/effective-go/2020 ( https://learnku.com/go/wikis/37683 )
+* https://github.com/bingohuang/effective-go-zh-en
+* https://github.com/liupzmin/effective-go-zh
