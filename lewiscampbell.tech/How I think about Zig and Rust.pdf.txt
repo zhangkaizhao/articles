@@ -1,0 +1,3 @@
+https://lewiscampbell.tech/blog/250117.html
+
+via https://this-week-in-rust.org/blog/2025/01/22/this-week-in-rust-583/
