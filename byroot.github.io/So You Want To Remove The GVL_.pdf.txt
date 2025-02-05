@@ -1,0 +1,3 @@
+https://byroot.github.io/ruby/performance/2025/01/29/so-you-want-to-remove-the-gvl.html
+
+via https://rubyweekly.com/issues/736
