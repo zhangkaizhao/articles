@@ -1,0 +1,7 @@
+https://tweedegolf.nl/en/blog/140/rust-needs-an-official-specification
+
+via https://tweedegolf.nl/en/blog
+
+via https://tweedegolf.nl/en/blog/147/mix-in-rust-with-java-or-kotlin
+
+via https://this-week-in-rust.org/blog/2025/02/12/this-week-in-rust-586/
