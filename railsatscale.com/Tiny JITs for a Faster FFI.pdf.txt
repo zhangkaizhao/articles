@@ -1,0 +1,1 @@
+https://railsatscale.com/2025-02-12-tiny-jits-for-a-faster-ffi/
