@@ -1,0 +1,3 @@
+https://www.ntietz.com/blog/whats-in-a-ring-buffer/
+
+via https://this-week-in-rust.org/blog/2025/02/19/this-week-in-rust-587/
