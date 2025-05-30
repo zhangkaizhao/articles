@@ -1,0 +1,3 @@
+https://losangelesaiapps.com/concurrent-web-crawling-in-ruby-with-async/
+
+via https://rubyweekly.com/issues/752
