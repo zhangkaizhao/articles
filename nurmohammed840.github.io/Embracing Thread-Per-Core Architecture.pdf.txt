@@ -1,0 +1,3 @@
+https://nurmohammed840.github.io/posts/embracing-thread-per-core-architecture/
+
+via https://this-week-in-rust.org/blog/2026/01/28/this-week-in-rust-636/
