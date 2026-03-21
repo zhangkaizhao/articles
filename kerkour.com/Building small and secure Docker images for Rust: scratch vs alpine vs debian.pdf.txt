@@ -1,0 +1,3 @@
+https://kerkour.com/rust-docker-small-secure-images
+
+via https://this-week-in-rust.org/blog/2026/03/18/this-week-in-rust-643/
