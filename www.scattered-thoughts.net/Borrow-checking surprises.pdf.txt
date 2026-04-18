@@ -1,0 +1,3 @@
+https://www.scattered-thoughts.net/writing/borrow-checking-surprises/
+
+via https://this-week-in-rust.org/blog/2026/04/15/this-week-in-rust-647/
