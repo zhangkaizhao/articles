@@ -1,0 +1,7 @@
+https://www.b-list.org/weblog/2020/mar/16/no-service/
+
+via https://spookylukey.github.io/django-views-the-right-way/thin-views.html
+
+via https://spookylukey.github.io/django-views-the-right-way/
+
+via https://jvns.ca/blog/2026/07/21/more-nice-django-things/
